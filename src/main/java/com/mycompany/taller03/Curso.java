@@ -16,9 +16,15 @@ public class Curso {
     private String nombre;
     private boolean estadoDisponible;
     private Profesor responsable;
+    
+    // Composición: Un curso tiene una lista de estudiantes inscritos y en espera.
+    // Los estudiantes existen únicamente en el contexto de un curso específico.
     private List<Estudiante> estudiantesInscritos;
     private List<Estudiante> estudiantesEnEspera;
+    // Composición: Un curso contiene varias actividades sumativas que no existirían fuera del curso.
     private List<ActividadSumativa> actividadesSumativas;
+    
+    // Composición: Un curso también tiene foros asociados, que están contenidos dentro del curso.
     private List<Foro> foros;
 
     public Curso(String id, String nombre) {
@@ -30,6 +36,9 @@ public class Curso {
         this.actividadesSumativas = new ArrayList<>();
         this.foros = new ArrayList<>();
     }
+    
+    // Métodos que gestionan la relación entre Curso y sus objetos dependientes.
+    // El curso "controla" la vida de estos objetos.
 
     public void setResponsable(Profesor responsable) {
         this.responsable = responsable;

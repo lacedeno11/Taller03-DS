@@ -8,6 +8,9 @@ package com.mycompany.taller03;
  *
  * @author abrahamcedeno
  */
+
+// Clase base que representa al personal académico. Puede ser un estudiante o un profesor.
+
 public class PersonalAcademico extends Usuario {
     public PersonalAcademico(String usuario, String contraseña, String nombre, String apellido) {
         super(usuario, contraseña, nombre, apellido);
