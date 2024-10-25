@@ -23,7 +23,8 @@ public class Foro {
         this.numeroDeComentarios = 0;
         this.comentarios = new ArrayList<>();
     }
-
+    
+    // Asociación: Un foro está asociado a usuarios que pueden ser estudiantes o profesores (PersonalAcademico).
     public void agregarComentario(PersonalAcademico usuario, String comentario) {
         comentarios.add(usuario.getNombre() + ": " + comentario);
         numeroDeComentarios++;
