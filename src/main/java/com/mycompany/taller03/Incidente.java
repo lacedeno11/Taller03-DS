@@ -43,7 +43,69 @@ public class Incidente {
         logActualizaciones.add("Incidente cerrado.");
     }
 
-    // Getters y Setters
-    // ...
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public LocalDateTime getFechaReportado() {
+        return fechaReportado;
+    }
+
+    public void setFechaReportado(LocalDateTime fechaReportado) {
+        this.fechaReportado = fechaReportado;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public List<String> getLogActualizaciones() {
+        return logActualizaciones;
+    }
+
+    public void setLogActualizaciones(List<String> logActualizaciones) {
+        this.logActualizaciones = logActualizaciones;
+    }
+
+    public LocalDateTime getFechaCerrado() {
+        return fechaCerrado;
+    }
+
+    public void setFechaCerrado(LocalDateTime fechaCerrado) {
+        this.fechaCerrado = fechaCerrado;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
 }
 

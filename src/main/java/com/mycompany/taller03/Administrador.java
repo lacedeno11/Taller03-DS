@@ -13,20 +13,37 @@ public class Administrador extends Usuario {
         super(usuario, contraseña, nombre, apellido);
     }
 
-    public void crearUsuarioConRol(String usuario, String contraseña, String nombre, String apellido, String rol) {
-        // Crear un nuevo usuario con el rol especificado
+    public class UsuarioFactory {
+        public static Usuario crearUsuarioConRol(String usuario, String contraseña, String nombre, String apellido, String rol) {
+            switch (rol) {
+                case "Profesor":
+                    return new Profesor(usuario, contraseña, nombre, apellido);
+                case "Estudiante":
+                    return new Estudiante(usuario, contraseña, nombre, apellido);
+                case "SoporteTecnico":
+                    return new SoporteTecnico(usuario, contraseña, nombre, apellido);
+                default:
+                    return null; // O lanzar una excepción si el rol es inválido
+            }
+        }
     }
 
+
     public void asignarPermiso(String usuario) {
-        // Asignar permisos al usuario
+         //codigo a implementar
     }
 
     public void actualizarSoftware() {
-        // Actualizar el software del sistema
+         //codigo a implementar
     }
 
     public void asignarResponsable(Curso curso, Profesor responsable) {
         curso.setResponsable(responsable);
     }
+    
+    public void recibirIncidente(Incidente c){
+       //codigo a implementar
+    }
+    
 }
 

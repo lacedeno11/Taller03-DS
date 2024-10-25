@@ -40,16 +40,84 @@ public class Curso {
     }
 
     public void aceptarInscripcion(Estudiante estudiante) {
+        if (estudiantesInscritos.contains(estudiante)) {
+            return; // O lanzar una excepción
+        }
         if (estudiantesEnEspera.contains(estudiante)) {
             estudiantesEnEspera.remove(estudiante);
             estudiantesInscritos.add(estudiante);
         }
     }
 
+
     public void agregarActividad(ActividadSumativa actividad) {
         actividadesSumativas.add(actividad);
     }
 
-    // Getters y Setters
-    // ...
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public boolean isEstadoDisponible() {
+        return estadoDisponible;
+    }
+
+    public void setEstadoDisponible(boolean estadoDisponible) {
+        this.estadoDisponible = estadoDisponible;
+    }
+
+    public List<Estudiante> getEstudiantesInscritos() {
+        return estudiantesInscritos;
+    }
+
+    public void setEstudiantesInscritos(List<Estudiante> estudiantesInscritos) {
+        this.estudiantesInscritos = estudiantesInscritos;
+    }
+
+    public List<Estudiante> getEstudiantesEnEspera() {
+        return estudiantesEnEspera;
+    }
+
+    public void setEstudiantesEnEspera(List<Estudiante> estudiantesEnEspera) {
+        this.estudiantesEnEspera = estudiantesEnEspera;
+    }
+
+    public List<ActividadSumativa> getActividadesSumativas() {
+        return actividadesSumativas;
+    }
+
+    public void setActividadesSumativas(List<ActividadSumativa> actividadesSumativas) {
+        this.actividadesSumativas = actividadesSumativas;
+    }
+    
+    public void eliminarCurso() {
+        // Eliminar todas las actividades, foros y estudiantes asociados
+        actividadesSumativas.clear();
+        foros.clear();
+        estudiantesInscritos.clear();
+        estudiantesEnEspera.clear();
+    }
+
+
+    public List<Foro> getForos() {
+        return foros;
+    }
+
+    public void setForos(List<Foro> foros) {
+        this.foros = foros;
+    }
+
+
 }

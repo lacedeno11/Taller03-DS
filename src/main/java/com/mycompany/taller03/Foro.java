@@ -29,6 +29,37 @@ public class Foro {
         numeroDeComentarios++;
     }
 
-    // Getters y Setters
-    // ...
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTematica() {
+        return tematica;
+    }
+
+    public void setTematica(String tematica) {
+        this.tematica = tematica;
+    }
+
+    public int getNumeroDeComentarios() {
+        return numeroDeComentarios;
+    }
+
+    public void setNumeroDeComentarios(int numeroDeComentarios) {
+        this.numeroDeComentarios = numeroDeComentarios;
+    }
+
+    public List<String> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<String> comentarios) {
+        this.comentarios = comentarios;
+    }
+
+
 }

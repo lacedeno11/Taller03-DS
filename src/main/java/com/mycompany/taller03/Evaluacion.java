@@ -4,6 +4,8 @@
  */
 package com.mycompany.taller03;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author abrahamcedeno
@@ -16,7 +18,14 @@ public class Evaluacion extends ActividadSumativa {
         this.limiteDeTiempo = limiteDeTiempo;
     }
 
-    // Getters y Setters
-    // ...
+    public int getLimiteDeTiempo() {
+        return limiteDeTiempo;
+    }
+
+    public void setLimiteDeTiempo(int limiteDeTiempo) {
+        this.limiteDeTiempo = limiteDeTiempo;
+    }
+
+
 }
 

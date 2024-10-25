@@ -18,6 +18,13 @@ public class Tarea extends ActividadSumativa {
         this.fechaDePublicacion = fechaDePublicacion;
     }
 
-    // Getters y Setters
-    // ...
+    public LocalDateTime getFechaDePublicacion() {
+        return fechaDePublicacion;
+    }
+
+    public void setFechaDePublicacion(LocalDateTime fechaDePublicacion) {
+        this.fechaDePublicacion = fechaDePublicacion;
+    }
+
+
 }
